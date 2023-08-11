@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.details.DetailWeatherFragment">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_20"
+        android:fontFamily="sans-serif-black"
+        android:text="Details"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <include
+        android:id="@+id/currentposition"
+        layout="@layout/current_weather_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_drawable_bg"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+    <View
+        android:id="@+id/divider"
+        android:layout_marginTop="@dimen/space_20"
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/currentposition"/>
+
+
+    <LinearLayout
+        android:id="@+id/astro"
+        android:layout_margin="@dimen/space_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <include
+            android:id="@+id/sunset"
+            layout="@layout/item_current_condition"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        <include
+            android:id="@+id/sunup"
+            layout="@layout/item_current_condition"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        <include
+            android:id="@+id/moon"
+            layout="@layout/item_current_condition"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+    <View
+        android:id="@+id/divider2"
+        android:layout_marginTop="@dimen/space_20"
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/astro"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:layout_margin="@dimen/space_20"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        app:layout_constraintTop_toBottomOf="@id/divider2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/layout_month_weather"
+        android:id="@+id/list"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

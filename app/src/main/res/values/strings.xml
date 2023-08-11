@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">wearherApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="splash_title">WEATHER</string>
+    <string name="dialog__message_error">Check your internet connxion</string>
+    <string name="dialog_button_title">ok</string>
+    <string name="dialog__title_error">Error</string>
+    <string name="avgmintemp">avgMinTemp :</string>
+    <string name="absmaxtemp">absMaxTemp :</string>
+    <string name="avgdailyrainfall">avgDailyRainfall :</string>
+    <string name="action_add">add city</string>
+    <string name="hit_add_city">Rabat , sale ....</string>
+    <string name="submit">add +</string>
+</resources>

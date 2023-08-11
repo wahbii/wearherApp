@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/splash"
+    android:id="@+id/nav_graph.xml">
+
+
+    <fragment android:name="com.idemia.wearherapp.presentation.splash.SplashFragment"
+        android:label="splashscreen"
+        android:id="@+id/splash"/>
+    <fragment android:name="com.idemia.wearherapp.presentation.weatherhome.HomeFragment"
+        android:label="homefragement"
+        android:id="@+id/home">
+        <action android:id="@+id/navigateToDeatail"
+            app:destination="@id/detail"/>
+        <argument
+            app:argType="com.idemia.wearherapp.data.models.DataWeather"
+            android:name="weatherdetail"
+            />
+
+    </fragment>
+
+    <fragment android:name="com.idemia.wearherapp.presentation.details.DetailWeatherFragment"
+        android:label="detailWeather"
+        android:id="@+id/detail"
+        >
+        <argument
+            app:argType="com.idemia.wearherapp.data.models.DataWeather"
+            android:name="weatherdetail"
+            />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:weightSum="3"
+    android:orientation="horizontal"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_height="wrap_content"
+        android:layout_width="0sp"
+        android:id="@+id/img"
+        android:src="@drawable/ic_baseline_location_on_24"
+        android:layout_weight="2"/>
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="0sp"
+        android:layout_weight="1"
+        android:id="@+id/value"/>
+
+
+</LinearLayout>

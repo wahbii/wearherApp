@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/currentcity"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/content"
+        android:visibility="invisible"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_20"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="50sp"
+            android:id="@+id/degree"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_20"
+            android:text="°C"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/degree"
+            android:textSize="30sp"
+            android:id="@+id/celcuc"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img"
+            android:layout_marginTop="@dimen/space_20"
+            android:layout_marginStart="@dimen/space_20"
+            android:src="@drawable/ic_baseline_location_on_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/degree"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_20"
+
+            app:layout_constraintTop_toBottomOf="@id/degree"
+            app:layout_constraintStart_toEndOf="@id/img"
+            android:textSize="@dimen/space_20"
+            android:id="@+id/position"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/black"/>
+
+
+        <ImageView
+            android:layout_width="@dimen/image_item"
+            android:layout_height="@dimen/image_item"
+            android:id="@+id/cloud"
+            android:layout_marginTop="@dimen/space_20"
+            android:layout_marginStart="@dimen/space_20"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_20"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cloud"
+            android:textSize="@dimen/space_20"
+            android:id="@+id/cloudtext"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+
+            />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_20"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="@dimen/space_20"
+        android:text="Loading ...."
+        android:id="@+id/loading"
+        android:fontFamily="sans-serif"
+        android:visibility="visible"
+        android:textColor="@color/black"/>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
